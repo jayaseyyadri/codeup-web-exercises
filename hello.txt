@@ -4,4 +4,6 @@ I am practicing Git!
 
 Its exciting
 
-Its intresting
+Its interesting
+
+So the final practice line , lets do this !
