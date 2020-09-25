@@ -3,5 +3,3 @@
 .DS_STORE
 
 
-console.log("i am a string")
-console.log( "this is a number "+ 2);
