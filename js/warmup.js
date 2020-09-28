@@ -1,6 +1,13 @@
-console.log("Hello  Shantha here");
-console.log("Hello  Sai here");
-console.log("Hello  Shiva here");
-console.log("Hello  Vicky here");
-console.log("Hello  Dinesh here");
-console.log("Hello  Rao here");
+// console.log("Hello  Shantha here");
+// console.log("Hello  Sai here");
+// console.log("Hello  Shiva here");
+// console.log("Hello  Vicky here");
+// console.log("Hello  Dinesh here");
+// console.log("Hello  Rao here");
+
+function sayHello( name){
+    console.log("Hello  Sai here");
+    console.log("Hello  Shiva here");
+
+}
+sayHello();
