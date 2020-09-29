@@ -11,7 +11,7 @@
     function sayHello(name) {
         return ("Hello " + name);
     }
-
+        sayHello("Sai");
     /**
      * TODO:
      * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -19,18 +19,18 @@
      *
      * console.log 'helloMessage' to check your work
      */
-    console.log(sayHello("Krishna"));
+
+    var helloMessage= console.log(sayHello("Jaya"));
+    console.log(helloMessage);
+
     /**
      * TODO:
      * Store your name as a string in a variable named 'myName', and pass that
      * variable to the 'sayHello' function. You should see the same output in the
      * console.
      */
-    var myName = "Jaya"
-    console.log(sayHello(myName));
-
-// Don't modify the following line, it generates a random number between 1 and 3
-// and stores it in a variable named random
+    // Don't modify the following line, it generates a random number between 1 and 3
+    // and stores it in a variable named random
     var random = Math.floor((Math.random() * 3) + 1);
 
     /**
@@ -52,9 +52,8 @@
      * number)
      */
     function isTwo(someNumber) {
-        return (someNumber == 2);
+        return (someNumber === 2);
     }
-
     console.log(random + " Number equals two ?" + isTwo(random));
 
     /**
@@ -81,8 +80,8 @@
      */
     var billTotalNumber = Number(prompt("Enter bill total in $ "));
     var tipPercentNumber = Number(prompt("enter tip percentage  in $ "));
-    var amountToBePaid = Number(alert("the tip amount is $" + calculateTip(billTotalNumber, tipPercentNumber)));
-    console.log(amountToBePaid);
+    var tipToBePaid = Number(alert("the tip amount is $" + calculateTip(billTotalNumber, tipPercentNumber)));
+    console.log(tipToBePaid);
 
     /**
      * TODO:
