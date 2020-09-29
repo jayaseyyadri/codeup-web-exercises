@@ -9,3 +9,5 @@ Its interesting
 So the final practice line , lets do this !
 
 this is a test fo merging
+
+test with functions
