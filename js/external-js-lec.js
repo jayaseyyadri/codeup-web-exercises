@@ -1,6 +1,6 @@
 "use strict";
 
-console.log("this is the external js file");
+console.log("this is lecture practice for external js file");
 
 
 var myAge =50;
