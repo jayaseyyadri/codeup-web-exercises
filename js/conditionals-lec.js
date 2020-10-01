@@ -306,7 +306,7 @@
 // }
 
 //WRITE YOUR TERNARY STATEMENT HERE!
-=
+
 var weather = "sunny";
 var checkWeather=(weather==="rainy") ? "It's raining!" : "Have a nice day!";
 console.log(checkWeather);
