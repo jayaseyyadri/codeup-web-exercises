@@ -163,38 +163,86 @@
 //  */
 //
 // var pickOwnNumber =confirm("would you like to pick a number ?");
-// if(pickOwnNumber) {
+//
+// if (pickOwnNumber === true) {
 //
 //     var ownNumber = Number(prompt("Enter a number"));
-//     var absoluteNumber=Math.abs(ownNumber)
-//     if (absoluteNumber % 2 === 0) {
-//         alert(absoluteNumber + " is Even");
+//     if (isNaN(ownNumber)) {
+//         alert("Enter a number");
 //     } else {
-//         alert(ownNumber + " is Odd")
-//     }
-//     alert((ownNumber + 100 ) + " is the sum of " + ownNumber + " and 100 ");
-//     if (ownNumber > 0) {
-//         console.log(ownNumber + " is positive");
-//     } else {
-//         console.log(ownNumber + " is negative");
+//         if (ownNumber % 2 === 0) {
+//             alert(ownNumber + " is Even");
+//         } else {
+//             alert(ownNumber + " is Odd")
+//         }
+//         alert((ownNumber + 100) + " is the sum of " + ownNumber + " and 100 ");
+//         if (ownNumber > 0) {
+//             alert(ownNumber + " is positive");
+//         } else {
+//             alert(ownNumber + " is negative");
+//         }
 //     }
 // }
 //
-//     // if (isNaN(ownNumber)) {
-//     // alert("Enter a number");
+//
 
 
-function chooseOwnNumber(num){
-var pickOwnNumber = true;
-if(pickOwnNumber) {
-    var ownNumber = Number(prompt("Enter a number"));
-    var absoluteNumber=Math.abs(ownNumber);
-    var checkEven=(absoluteNumber % 2 === 0)? absoluteNumber + " is Even":ownNumber + " is Odd";
-    var addHundred=(ownNumber + 100 ) + " is the sum of " + ownNumber + " and 100 ";
-    var isPositive =(ownNumber > 0)?ownNumber + " is positive":ownNumber + " is negative";
+/**
+ //  * TODO:
+ //  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
+ //  * would like to enter a number. If they click 'Ok', prompt the user for a
+ //  * number, then use 3 separate alerts to tell the user:
+ //  *
+ //  * - whether the number is even or odd
+ //  * - what the number plus 100 is
+ //  * - if the number is negative or positive
+ //  *
+ //  * if what the user enters is not a number, use an alert to tell them that, and
+ //  * do *not* display any of the above information.
+ //  *
+ //  * Can you refactor your code to use functions?
+ //  * HINT: The way we prompt for a value could be improved
+ //  */
+
+function chooseOwnNumber() {
+    // get user input via confirm
+    var userChoice  = confirm("Would you like to enter a number");
+
+    // if user select true
+    if(userChoice === true) {
+        //prompt for input
+        var userInput = prompt("Please enter a number");
+
+        // is it a valid number
+        if(isNaN(userInput) === false) {
+
+            // Check if even or odd
+            let userInputNumber = Number(userInput);
+            if(userInputNumber % 2 === 0){
+                alert("Its an even number");
+            } else {
+                alert("Its an odd number");
+            }
+
+            // Number plus 100
+            alert(userInputNumber + 100);
+
+            // Postive or Negetive
+            if(userInputNumber > 0) {
+                alert("Its a positive number");
+            }
+            else {
+                alert("Its a Negetive number");
+            }
+
+        }else { // when its not a number
+            alert("its not a  number");
+        }
+
+    }
+
 }
-return checkEven +"\n"+ isPositive+"\n"+ addHundred;
 //var check = (num > 0) ? num + " is positive" : num + " is negative";
-}
 
-console.log(chooseOwnNumber(7));
+
+chooseOwnNumber();
