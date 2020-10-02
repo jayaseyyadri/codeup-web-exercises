@@ -209,22 +209,17 @@ function chooseOwnNumber() {
 
     var userChoice  = confirm("Would you like to enter a number");
 
-
     if(userChoice === true) {
 
         var userInput = prompt("Please enter a number");
 
-
-        if(isNaN(userInput) === false) {
-
-
+      if(isNaN(userInput) === false) {
             var userInputNumber = Number(userInput);
             if(userInputNumber % 2 === 0){
                 alert("Its an even number");
             } else {
                 alert("Its an odd number");
             }
-
 
             alert(userInputNumber + 100);
 
