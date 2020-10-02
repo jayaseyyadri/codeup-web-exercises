@@ -127,6 +127,7 @@ function calculateTotal(luckyNum,totalAmount) {
 console.log(calculateTotal(1, 100));
 console.log(calculateTotal(2, 100));
 console.log(calculateTotal(4, 100));
+
   /**
   * TODO:
   * Uncomment the line below to generate a random number between 0 and 6.
