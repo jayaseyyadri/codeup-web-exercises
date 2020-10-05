@@ -1,4 +1,4 @@
-
+"use strict";
 do {
 	var userNumber = Number(prompt("Enter an odd number between 1 & 50"));
 	if(userNumber<1||userNumber >50){//ask for odd no 1-50
@@ -13,16 +13,16 @@ do {
     }
 }while (true);//number is not odd keep prompting
 
+for(var i = 1; i <= 50; i++){
+    if(i % 2 === 0){
+        continue;
+    }
 
-
-for(var i=1;i<50;i++) {
-	if (parseFloat(check)== i){
-		console.log("Yikes skipping " + check)
-		continue;
-	}
-	if (i % 2 !== 0) {//if odd generate
-		console.log(i)
-	}
+    if(i === userNumber){
+        console.log("Yikes! Skipping number: " + i);
+    }else {
+        console.log("Here is an odd number: " + i);
+    }
 }
 
 var multiply=1;
