@@ -12,13 +12,13 @@ for(var i=1;i<50;i++) {
 	}
 }
 
-var i =2 ;
-
 var multiply=1;
  while( multiply <65536){
 	 multiply=i*multiply;
  	console.log(multiply);
  }
+
+
 var totalConesToSell = Math.floor((Math.random() * (100 - 50 + 1)) + 50);//no of cones to sell for the day
 do {
     var numberOfConesToBuy = Math.floor(Math.random() * 5) + 1;// cones customer wants to buy
