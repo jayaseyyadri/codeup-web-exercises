@@ -1,4 +1,4 @@
-(function(){
+(function () {
     "use strict";
 
     /**
@@ -6,38 +6,38 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    var names=['Beryl','Sara','Alisha','Kate'];
+    var names = ['Beryl', 'Sara', 'Alisha', 'Kate'];
 
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-    //console.log(names);
+    console.log(names);
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-    // console.log(names[0]);
-    // console.log(names[1]);
-    // console.log(names[2]);
-    // console.log(names[3]);
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-// for(var  i = 0;i<names.length;i++){
-//     console.log(names[i]);
-// }
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-    // names.forEach(function (name){
-    //     console.log(name);
-    // })
+    names.forEach(function (name) {
+        console.log(name);
+    })
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -50,26 +50,23 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      ***/
 
-     var arrayName =[1,2,5,7,5,4,8]
-    function firstElement(arrayName )
-    {
-        return arrayName[0]
+    var arrayNumbers = [1, 2, 5, 7, 5, 4, 8]
 
+    function first(arrayNumbers) {
+        return arrayNumbers[0]
     }
 
-    console.log(firstElement(arrayName));
+    console.log(first(arrayNumbers));
 
-    function secondElement(arrayName)
-    {
-        return arrayName[1];
+    function second(arrayNumbers) {
+        return arrayNumbers[1];
     }
 
-    console.log(secondElement(arrayName));
+    console.log(second(arrayNumbers));
 
-    function lastElement(arrayName )
-    {
-        return arrayName[arrayName.length-1];
+    function last(arrayNumbers) {
+        return arrayNumbers[arrayNumbers.length - 1];
     }
 
-    console.log(lastElement(arrayName));
+    console.log(last(arrayNumbers));
 })();
