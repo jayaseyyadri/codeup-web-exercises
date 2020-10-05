@@ -7,6 +7,7 @@
      * 'names'.
      */
     var names = ['Beryl', 'Sara', 'Alisha', 'Kate'];
+\
 
     /**
      * TODO:
