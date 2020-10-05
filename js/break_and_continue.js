@@ -1,17 +1,3 @@
-// function isEven(check){
-//     return check%2===0;
-// }
-// do{
-//     var check =parseFloat(prompt("Enter an odd number between 1 and 50"));
-//         for(var i =0;i<50;i++) {
-//             if (!isEven(i)) {
-//                 console.log(i);
-//             }
-//             }if (check === i) {
-//         console.log(check + " Yikes you picked ");
-//         }
-// }while(check%2===0)
-
 
 do {
 	var check = prompt("Enter a number between 1 & 50");//ask for odd no 1-50
