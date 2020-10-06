@@ -203,3 +203,25 @@ myMac.currentUser();
  * If we have an Array of Objects, we can iterate through it to access each
  * Object element and pull the properties and methods that we need.
  */
+
+//
+// var pickYourPlayer = [
+//     {name:{
+//         firstname: "spongebob",
+//     lastName:'Squarepants'},
+//         catchphrase:function (){
+//     return "Lets play"}
+//     }
+//     {name:"patrick",
+//     lastname:"star"},
+//     {name:"Eugene",
+//     lastName: "krabs"},
+//     catchphrase:function (){
+//     return
+// }
+//     {name:"squiward " ,
+//     lastname:"tentacles"}];
+//
+// pickYourPlayer.forEach(function (player){
+//     console.log(player.name);
+// });
