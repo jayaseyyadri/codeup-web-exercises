@@ -25,12 +25,13 @@
      * string, and <li> tags around each planet.
      */
     var planetBreak=[];
-    var planetList=[];
+   // var planetList=[];
 
     planetBreak= planetsArray.join('<br>');
     console.log(planetBreak);
-    planetList =planetsArray.join('<ul>')
 
+    // planetList =planetsArray.join("<li>\n</li>")+("li")
+    // console.log(planetList);
 
 
 })();
