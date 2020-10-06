@@ -144,24 +144,42 @@ console.log(myMac);
  * message: "Dialing..."
  */
 
+myPhone.call=function (){
+    console.log("Dialling");
+};
+
+myPhone.call();
+
 /**
  * TO DO: Let's add functionality to our Mac Object. Create a method named
  * 'powerOn'. When called, this should display a console message that says
  * "Powering on..."
  */
+myMac.powerOn=function (){
+    console.log("powering on.");
+};
 
+myMac.powerOn();
 /**
  * TO DO TOGETHER: Let's add one more piece of functionality. Create a
  * method on the phone object that returns a message displaying the user's
  * firstName and lastName. Hint: use the 'this' keyword.
  */
 
+myPhone.currentUser=function (){
+    console.log("current user :" + this.name.firstName + " " + this.name.lastName);
+};
+myPhone.currentUser();
 /**
  * TO DO: One last thing. Let's add a 'currentUser' method that displays the
  * Mac user's 'username' and 'email'. Use the 'this' keyword to reference
  * the properties we created earlier.
  */
 
+myMac.currentUser=(function (){
+    console.log("Current username" + " " + this.login.username + " " + "Current email id" + this.login.email);
+});
+myMac.currentUser();
 
 /*********************************************
  *                  NESTED VALUES
