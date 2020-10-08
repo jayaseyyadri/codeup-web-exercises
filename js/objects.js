@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
 
     /**
@@ -32,7 +32,7 @@
      */
 
     person.sayHello = function () {
-        console.log("Hello from" + " " + this.firstName + " " + this.lastName);
+        console.log("Hello from " + this.firstName + " " + this.lastName + "!");
     };
 
     /** TODO:
@@ -60,11 +60,11 @@
         var newPrice;
 
         if (shopper.amount > 200) {
-            newPrice= shopper.amount-shopper.amount*.12;
+            newPrice = shopper.amount - shopper.amount * .12;
         } else {
-            newPrice=shopper.amount
+            newPrice = shopper.amount
         }
-        console.log("Name : " + shopper.name + " | price to pay before discount : " + shopper.amount  + " | price to be paid after discount : " + newPrice)
+        console.log("Name : " + shopper.name + " | price to pay before discount : " + shopper.amount + " | price to be paid after discount : " + newPrice)
     });
 
 
@@ -81,27 +81,37 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    var books=[
-        {author:
-                {firstName:"JK",lastName:"Rowling"},
-            title:"HarryPotter"},
+    var books = [
+        {
+            author:
+                {firstName: "JK", lastName: "Rowling"},
+            title: "HarryPotter"
+        },
 
-        {author:
-                {firstName:"Robin",lastName:"Sharma"},
-            title:"Monk who sold his ferrari"},
+        {
+            author:
+                {firstName: "Robin", lastName: "Sharma"},
+            title: "Monk who sold his ferrari"
+        },
 
-        {author:
-                {firstName:"Jason",lastName:"Fung"},
-            title:"HarryPotter"},
+        {
+            author:
+                {firstName: "Jason", lastName: "Fung"},
+            title: "HarryPotter"
+        },
 
-        {author:
-                {firstName:"Adele",lastName:"Fabler"},
-            title:"How to Talk So Kids Will Listen & Listen So Kids Will Talk"},
+        {
+            author:
+                {firstName: "Adele", lastName: "Fabler"},
+            title: "How to Talk So Kids Will Listen & Listen So Kids Will Talk"
+        },
 
-        {author:
-                {firstName:"Spencer",lastName:"Johnson"},
-            title:"Who Moved My Cheese"}
-    ] ;
+        {
+            author:
+                {firstName: "Spencer", lastName: "Johnson"},
+            title: "Who Moved My Cheese"
+        }
+    ];
 
 
     console.log(books[1]);
@@ -132,8 +142,8 @@
      *      ...
      */
 
-    books.forEach(function(book,index  ) {
-        console.log("Book Number #  " +  index+ " | Title : " + book.title + " Author : " + book.author.firstName +" " + book.author.lastName)
+    books.forEach(function (book, index) {
+        console.log("Book Number #  " + index + " | Title : " + book.title + " Author : " + book.author.firstName + " " + book.author.lastName)
     });
 
 
@@ -147,17 +157,15 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    function createBook(title,author){
-        books.forEach(function (book){
-            console.log(book.author.lastName +book.author.firstName )
+    function createBook(title, author) {
+        books.forEach(function (book) {
+            console.log(book.author.lastName + book.author.firstName)
         })
 
         showBookInfo()
 
 
     }
-
-
 
 
 })();
