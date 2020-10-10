@@ -1,5 +1,5 @@
-"use strict";
 (function () {
+    "use strict";
     console.log("warmup js");
 // console.log("Hello  Shantha here");
 // console.log("Hello  Sai here");
