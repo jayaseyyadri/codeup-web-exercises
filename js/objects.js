@@ -54,7 +54,7 @@
         {name: 'George', amount: 320}
     ];
 
-    shoppers.forEach(function(shopper) {
+    shoppers.forEach(function (shopper) {
 
         var newPrice;
         if (shopper.amount > 200) {
@@ -111,7 +111,7 @@
         }
     ];
 
-  /**
+    /**
      * TODO:
      * Loop through the books array and output the following information about
      * each book:
@@ -151,15 +151,16 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    function createBook(title,first,last) {
+    function createBook(title, first, last) {
         books.forEach(function (book) {
-            console.log(book.author.lastName + book.author.firstName +book.title)
+            console.log(book.author.lastName + book.author.firstName + book.title)
         })
 
     }
+
     books.push(createBook("Nursery Rhymes", "Jaya", "S"));
 
-    function showBookInfo(book, i){
+    function showBookInfo(book, i) {
         var output = "";
         output += "Book # " + (i + 1) + "\n";
         output += "Title: " + book.title + "\n";
