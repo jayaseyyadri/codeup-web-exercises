@@ -1,6 +1,6 @@
 "use strict";
-
-console.log("warmup js");
+(function () {
+    console.log("warmup js");
 // console.log("Hello  Shantha here");
 // console.log("Hello  Sai here");
 // console.log("Hello  Shiva here");
@@ -8,9 +8,11 @@ console.log("warmup js");
 // console.log("Hello  Dinesh here");
 // console.log("Hello  Rao here");
 
-function sayHello( name){
-    console.log("Hello" +name );
+    function sayHello(name) {
+        console.log("Hello" + name);
 
-}
-sayHello("sai");
-sayHello("mrinal");
+    }
+
+    sayHello("sai");
+    sayHello("mrinal");
+})();
