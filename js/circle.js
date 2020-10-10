@@ -15,13 +15,13 @@
 
         logInfo: function (doRounding) {
             // TODO: complete this method.
-            var ar = this.getArea();
+            var areaCircle = this.getArea();
             if (doRounding) {
-                ar = Math.round(ar);
+                areaCircle = Math.round(areaCircle);
             }
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
-            console.log("Area of a circle with radius: " + circle.radius + " ,is: " + ar);
+            console.log("Area of a circle with radius: " + this.radius + " ,is: " + areaCircle);
         }
 
     };
