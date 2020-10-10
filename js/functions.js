@@ -1,5 +1,5 @@
-"use strict";
 (function () {
+    "use strict";
     /**
      * TODO:
      * Create a function called 'sayHello' that takes a parameter 'name'.
@@ -22,6 +22,9 @@
 
     var helloMessage= console.log(sayHello("Jaya"));
     console.log(helloMessage);
+
+    var myName ="Jaya"
+    console.log(sayHello(myName));
 
     /**
      * TODO:
