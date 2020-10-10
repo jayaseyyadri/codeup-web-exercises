@@ -15,12 +15,10 @@
     var person = {
         firstName: "Jaya",
         lastName: "Seyyadri",
-        // sayHello: function (){
-        //     console.log("Hello from" + " " +this.firstName + " " + this.lastName);
-        //}
     };
 
-
+    console.log(person.firstName);
+    console.log(person.lastName);
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -34,6 +32,7 @@
     person.sayHello = function () {
         console.log("Hello from " + this.firstName + " " + this.lastName + "!");
     };
+    console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -55,10 +54,9 @@
         {name: 'George', amount: 320}
     ];
 
-    shoppers.forEach(function (shopper) {
+    shoppers.forEach(function(shopper) {
 
         var newPrice;
-
         if (shopper.amount > 200) {
             newPrice = shopper.amount - shopper.amount * .12;
         } else {
@@ -113,11 +111,7 @@
         }
     ];
 
-
-    console.log(books[1]);
-
-
-    /**
+  /**
      * TODO:
      * Loop through the books array and output the following information about
      * each book:
@@ -157,14 +151,21 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    function createBook(title, author) {
+    function createBook(title,first,last) {
         books.forEach(function (book) {
-            console.log(book.author.lastName + book.author.firstName)
+            console.log(book.author.lastName + book.author.firstName +book.title)
         })
 
-        showBookInfo()
+    }
+    books.push(createBook("Nursery Rhymes", "Jaya", "S"));
 
-
+    function showBookInfo(book, i){
+        var output = "";
+        output += "Book # " + (i + 1) + "\n";
+        output += "Title: " + book.title + "\n";
+        output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += "---";
+        console.log(output);
     }
 
 
