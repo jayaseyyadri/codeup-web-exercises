@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form>
+
+        <select name="property_type">
+            <option value="IndependantHouse">Independant House</option>
+            <option value="Condomonium">Condomonium</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Duplex">Duplex</option>
+            <option value="Single_storey">Single_Storey</option>
+        </select>
+
+    <br>
+    <br>
+<label for="squarefootage">Square Footage</label>
+    <select name="squareFeet" id="squarefootage">
+        <option value="any">Any</option>
+        <option value="500">500</option>
+        <option value="700">700<option>
+        <option value="1000">1000</option>
+        <option value="1250">1250x</option>
+        <option value="1500">1500</option>
+        <option value=2000">2000</option>
+    </select>
+
+
+    <div>
+        <br>
+    <label for="zipcode">Zipcode</label>
+    <input type="text" id="zipcode" name="zipcode">
+    </div>
+    <br>
+    <br>
+<!--    &lt;!&ndash;<label for="minPrice">Min Price</label>&ndash;&gt;-->
+<!--    <input type="range" id="minPrice" value="minPrice" min ="0" max="100000" step="500">-->
+    <label for="minPrice">Min Price</label>
+    <input type="text" id="minPrice" placeholder="000">
+    <label for="maxPrice">Max Price</label>
+    <input type="text" id="maxPrice" placeholder="100000" >
+    <br>
+<br>
+
+    <label for="noOfBedrooms">Number of Bedrooms</label>
+    <input type="text" id="noOfBedrooms">
+    <br>
+    <br>
+    <label for="noOfBathrooms">Number of Bathrooms</label>
+    <input type="text" id="noOfBathrooms"  >
+    <button>Search now</button>
+
+
+
+</form>
+</body>
+</html>
