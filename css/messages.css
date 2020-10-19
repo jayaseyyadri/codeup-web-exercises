@@ -5,6 +5,28 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
-.message message-info{
+
+.message{
+    margin-bottom: 5px;
+    width: 80%;
+    border-radius:10px;
+}
+.message-info{
     background-color:#CEDFFE ;
+    color: #2c2cc4;
+}
+.message-success{
+background-color:#D0F3DB;
+color: #26b152;
+
+}
+.message-warning{
+background-color: #FCFACC;
+color: #ddd003;
+
+}
+.message-error{
+background-color: #F9D3D8;
+    color: #c8263b;
+
 }
