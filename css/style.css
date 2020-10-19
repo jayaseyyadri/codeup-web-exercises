@@ -1,4 +1,19 @@
 
 .fancy-header{
-    color: purple;
+    color: #800080;
+    color: #6a0dad;
+    text-align: center;
+}
+h1{
+text-decoration: underline;
+color: #0a7375;
+}
+body{
+    background-color: darkkhaki;
+    background-image: url("../htmlImages/IMG_3387.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+ul{
+    list-style-type:square;
 }
