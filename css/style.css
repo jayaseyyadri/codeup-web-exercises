@@ -10,10 +10,34 @@ color: #0a7375;
 }
 body{
     background-color: #fff44e;
+    font-family: 'Sansita Swashed',cursive;
+    background: lightgrey url("../htmlImages/IMG_3387.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
+    /*filter: blur(8px);*/
+    /*webkit-filter: blur(8px);*/
     background-position: center;
-
+    background-size: cover;
 }
+
+
 ul{
     list-style-type:square;
+}
+table{
+    padding-left: 5px;
+    font-size: 10px;
+}
+a:visited{
+    color:deeppink;
+}
+a:active{
+    background-color: #0004ff;
+}
+a:link{
+
+}
+a:hover{
+    color:purple;
 }
