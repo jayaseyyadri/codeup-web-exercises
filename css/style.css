@@ -9,10 +9,10 @@ text-decoration: underline;
 color: #0a7375;
 }
 body{
-    background-color: darkkhaki;
-    background-image: url("../htmlImages/IMG_3387.jpg");
+    background-color: #fff44e;
     background-repeat: no-repeat;
     background-position: center;
+
 }
 ul{
     list-style-type:square;
