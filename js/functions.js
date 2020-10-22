@@ -9,7 +9,7 @@
      * > sayHello("codeup") // returns "Hello, codeup!"
      */
     function sayHello(name) {
-        return ("Hello " + name);
+        return ("Hello, " + name);
     }
         sayHello("Sai");
     /**
@@ -20,7 +20,7 @@
      * console.log 'helloMessage' to check your work
      */
 
-    var helloMessage= console.log(sayHello("Jaya"));
+    var helloMessage= sayHello("Jaya");
     console.log(helloMessage);
 
     var myName ="Jaya"
