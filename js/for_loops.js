@@ -18,9 +18,9 @@
     }
 
 
-    for (var i = 0; i <= 9; i++) {
+    for (var i = 1; i <= 9; i++) {
         var row = '';
-        for (var j = 0; j < i; j++) {
+        for (var j = 1; j <= i; j++) {
             row += i;
         }
         console.log(row);

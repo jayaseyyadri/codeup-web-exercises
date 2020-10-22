@@ -12,7 +12,7 @@
             alert(userNumber + " is valid .Thank you!");
             break;
         }
-    } while (true);//number is not odd keep prompting
+    } while (true);
 
     for (var i = 1; i <= 50; i++) {
         if (i % 2 === 0) {
