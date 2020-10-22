@@ -99,11 +99,11 @@
      *
      * > applyDiscount(45.99, 0.12) // 40.4712
      */
-    function applyDiscount(OriginalPrice,discountPercent) {
+    function applyDiscount(originalPrice,discountPercent) {
        var newPrice= listPrice-(listPrice*discountPercent)/100;
         return newPrice;
     }
     var listPrice=Number(prompt("Enter the listPrice : "));
     var discountPercent =Number(prompt("Enter the discount  : "));
-    alert("you price after discount is "+ applyDiscount(listPrice,discountPercent));
+    alert("you price after discount is "+ applyDiscount(listPrice,discountPercent).toFixed(2));
 })();
