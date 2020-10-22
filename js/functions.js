@@ -23,7 +23,7 @@
     var helloMessage= sayHello("Jaya");
     console.log(helloMessage);
 
-    var myName ="Jaya"
+    var myName ="Jaya";
     console.log(sayHello(myName));
 
     /**
@@ -71,8 +71,7 @@
      * > calculateTip(0.15, 33.42) // returns 5.013
      */
     function calculateTip(billTotal, tipPercent) {
-        var tip = ((billTotal * tipPercent) / 100);
-        return tip;
+        return ((billTotal * tipPercent) / 100);
     }
 
     /**
