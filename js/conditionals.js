@@ -59,7 +59,6 @@
      */
     function analyzeColorSwitch(randomColor) {
 
-
         switch (randomColor) {
             case "red":
                 return ("Strawberries are red");
@@ -222,12 +221,12 @@
                     alert("Its an odd number");
                 }
 
-                alert(userInputNumber + 100);
+                alert( userInputNumber+ " + 100 is "+userInputNumber + 100);
 
                 if (userInputNumber > 0) {
-                    alert("Its a positive number");
+                    alert(userInputNumber+ "is a positive number");
                 } else {
-                    alert("Its a Negative number");
+                    alert(userInputNumber +"is a Negative number");
                 }
 
             } else {
