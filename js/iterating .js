@@ -55,10 +55,10 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      ***/
 
-    var arrayNumbers = [1, 2, 5, 7, 5, 4, 8]
+    var arrayNumbers = [1, 2, 5, 7, 5, 4, 8];
 
     function first(arrayNumbers) {
-        return arrayNumbers[0]
+        return arrayNumbers[0];
     }
     console.log("***************** 1ST FUNCTION*****************")
 
