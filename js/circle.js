@@ -1,14 +1,12 @@
 (function () {
     "use strict";
 
-    // create a circle object
     var circle = {
         radius: 3,
 
         getArea: function () {
             // TODO: complete this method
             // hint: area = pi * radius^2
-
             var area = Math.PI * Math.pow(this.radius, 2);
             return area; // TODO: return the proper value
         },

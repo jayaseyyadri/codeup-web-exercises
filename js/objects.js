@@ -49,9 +49,16 @@
      */
 
     var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
+        {
+            name: 'Cameron',
+            amount: 180
+        },
+        {
+            name: 'Ryan',
+            amount: 250
+        },
+        {   name: 'George',
+            amount: 320}
     ];
 
     shoppers.forEach(function (shopper) {
@@ -81,21 +88,26 @@
 
     var books = [
         {
-            author:
-                {firstName: "JK", lastName: "Rowling"},
-            title: "HarryPotter"
+            title: "HarryPotter",
+            author: {
+                firstName: "JK",
+                lastName: "Rowling"
+            },
+
         },
 
         {
-            author:
-                {firstName: "Robin", lastName: "Sharma"},
             title: "Monk who sold his ferrari"
+            author: {
+                    firstName: "Robin";
+                     lastName: "Sharma"},
         },
 
-        {
-            author:
-                {firstName: "Jason", lastName: "Fung"},
-            title: "HarryPotter"
+        {  title: "HarryPotter"
+            author: {
+                firstName: "Jason",
+                lastName: "Fung"},
+
         },
 
         {
