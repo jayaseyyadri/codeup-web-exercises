@@ -1,20 +1,30 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+.navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #26b152;
 }
 ul{
     list-style: none;
     display: flex;
-    height: 100%;
-    margin:1em;
+    width: 100%;
+    justify-content: space-around;
+
+
+}
+li{
+    padding: 1em;
 }
 
 nav{
-    display: flex;
-    flex-direction: row;
     height: 4.25em;
-    justify-content: space-evenly;
-    align-content: center;
 }
 nav a{
     text-decoration: black;
@@ -25,4 +35,7 @@ a:hover{
 a:visited{color:grey}
 .logo{
     font-size: 3em;
+    padding: 0;
+    flex-grow: 1;
+    text-align: center;
 }
