@@ -55,23 +55,21 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      ***/
 
-    var arrayNumbers = [1, 2, 5, 7, 5, 4, 8];
-
-    function first(arrayNumbers) {
-        return arrayNumbers[0];
+    function first(array) {
+        return array[0];
     }
     console.log("***************** 1ST FUNCTION*****************")
 
     console.log(first(names));
 
-    function second(arrayNumbers) {
-        return arrayNumbers[1];
+    function second(array) {
+        return array[1];
     }
     console.log("***************** 2ND FUNCTION*****************")
     console.log(second(names));
 
-    function last(arrayNumbers) {
-        return arrayNumbers[arrayNumbers.length - 1];
+    function last(array) {
+        return array[array.length - 1];
     }
     console.log("***************** 3RDFUNCTION*****************")
     console.log(last(names));
