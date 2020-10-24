@@ -1,42 +1,30 @@
 
 .fancy-header{
-    color: #000680;
-    color: #0d10ad;
+    color: #e425ea;
+    color: #ff5928;
     text-align: center;
 }
 h1{
 text-decoration: underline;
-color: #0a7375;
+color: #ff8d33;
 }
 body{
-    background-color: #fff44e;
     font-family: 'Sansita Swashed',cursive;
-    background: lightgrey url("../htmlImages/IMG_3387.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*filter: blur(8px);*/
-    /*webkit-filter: blur(8px);*/
-    background-position: center;
+    background-image: url("../htmlImages/blue-binary-code-illustration-background-artistic-numbers-data-information-abstract-bokeh-blurred-color-78971338.jpg");
     background-size: cover;
 }
-
-
 ul{
     list-style-type:square;
 }
 table{
     padding-left: 5px;
-    font-size: 10px;
+    font-size: 1em;
 }
 a:visited{
     color:deeppink;
 }
 a:active{
     background-color: #0004ff;
-}
-a:link{
-
 }
 a:hover{
     color:purple;
