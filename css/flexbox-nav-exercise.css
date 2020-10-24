@@ -3,39 +3,34 @@
     box-sizing: border-box;
     margin: 0;
     padding:0;
+    color: black;
+
 }
 
 .navbar{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: #26b152;
+    /*display:flex;*/
+    background-color: #a5aaa7;
+    height: 4.25em;
 }
 ul{
     list-style: none;
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.item{
+    margin: 1em;
+    font-family: 'Work Sans',"Arial","Times New Roman";
+}
 
-
-}
-li{
-    padding: 1em;
-}
-
-nav{
-    height: 4.25em;
-}
-nav a{
-    text-decoration: black;
-}
 a:hover{
     color:blue;
 }
-a:visited{color:grey}
+/*a:visited{color: #5e5c5c*/
+/*}*/
 .logo{
+    font-family:"Montserrat","Arial","sans-serif";
     font-size: 3em;
-    padding: 0;
-    flex-grow: 1;
-    text-align: center;
+    margin: auto;
+    justify-content: center;
 }
