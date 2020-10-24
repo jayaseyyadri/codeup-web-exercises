@@ -1,3 +1,8 @@
+:root{
+    --blue: #CDDEFF;
+    --text-info: #514EA5;
+}
+
 body, html {
     height: 100%;
     width: 100%;
@@ -8,14 +13,17 @@ body, html {
 .message{
     margin: 5px;
     width: 80%;
-    padding:10px ;
-    border: 1px  solid lightgrey;
+    padding: .5em ;
+    border: 1px solid lightgrey;
     border-radius:10px;
 }
 
 .message-info{
-    background-color:#CEDFFE ;
-    color: #2c2cc4;
+    /*background-color:#CEDFFE ;*/
+    /*color: #2c2cc4;*/
+
+   background:  var(--blue);
+    color: var(--text-info);
 }
 .message-success{
 background-color:#D0F3DB;
