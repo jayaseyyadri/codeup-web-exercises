@@ -115,6 +115,8 @@ margin-top:2em;
     background-color:var(--light-bg);
     border-bottom: 1px solid var(--separator-color);
     padding:.5em;
+    display: inline-block;
+
     overflow: auto;
 
 }
