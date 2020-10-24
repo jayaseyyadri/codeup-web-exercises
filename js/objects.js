@@ -146,10 +146,10 @@
      *      ...
      */
 
-    books.forEach(function (book, index) {
-        console.log("Book Number #  " + index + " | Title : " + book.title + " Author : " + book.author.firstName + " " + book.author.lastName)
-    });
-
+    // books.forEach(function (book, index) {
+    //     console.log("Book Number #  " + index + " | Title : " + book.title + " Author : " + book.author.firstName + " " + book.author.lastName)
+    // });
+books.forEach(showBookInfo);
 
     /**
      * Bonus:
@@ -162,10 +162,14 @@
      *   `showBookInfo` function.
      */
     function createBook(title, first, last) {
-        books.forEach(function (book) {
-            console.log( book.title+ book.author.firstName+book.author.lastName)
-        })
+            return{
+                title: title,
+                author:{
+                    firstName:first,
+                     lastName:last
+            }
 
+        };
     }
 
     books.push(createBook("Nursery Rhymes", "Jaya", "S"));
