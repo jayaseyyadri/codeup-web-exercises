@@ -14,7 +14,7 @@
 
     var person = {
         firstName: "Jaya",
-        lastName: "Seyyadri",
+        lastName: "Seyyadri"
     };
 
     console.log(person.firstName);
@@ -30,7 +30,7 @@
      */
 
     person.sayHello = function () {
-        console.log("Hello from " + this.firstName + " " + this.lastName + "!");
+       return("Hello from " + this.firstName + " " + this.lastName + "!");
     };
     console.log(person.sayHello());
 
@@ -58,7 +58,8 @@
             amount: 250
         },
         {   name: 'George',
-            amount: 320}
+            amount: 320
+        }
     ];
 
     shoppers.forEach(function (shopper) {
@@ -93,17 +94,14 @@
                 firstName: "JK",
                 lastName: "Rowling"
             },
-
         },
-
         {
-            title: "Monk who sold his ferrari"
+            title: "Monk who sold his ferrari",
             author: {
-                    firstName: "Robin";
+                    firstName: "Robin",
                      lastName: "Sharma"},
         },
-
-        {  title: "HarryPotter"
+        {  title: "HarryPotter",
             author: {
                 firstName: "Jason",
                 lastName: "Fung"},
@@ -165,7 +163,7 @@
      */
     function createBook(title, first, last) {
         books.forEach(function (book) {
-            console.log(book.author.lastName + book.author.firstName + book.title)
+            console.log( book.title+ book.author.firstName+book.author.lastName)
         })
 
     }
