@@ -4,11 +4,12 @@
     margin: 0;
     padding:0;
     color: black;
+    font-weight: bold;
+    text-decoration: none;
 
 }
 
 .navbar{
-    /*display:flex;*/
     background-color: #a5aaa7;
     height: 4.25em;
 }
@@ -16,18 +17,20 @@ ul{
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-content: center;
+    height: 100%;
 }
 .item{
     margin: 1em;
     font-family: 'Work Sans',"Arial","Times New Roman";
-}
 
+}
+.icon{margin: 1em;
+font-size: large}
 a:hover{
     color:blue;
 }
-/*a:visited{color: #5e5c5c*/
-/*}*/
+
 .logo{
     font-family:"Montserrat","Arial","sans-serif";
     font-size: 3em;
