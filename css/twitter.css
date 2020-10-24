@@ -7,6 +7,7 @@
 }
 * {
     box-sizing: border-box;
+    list-style: none;
 }
 body, html {
     background-color: var(--main-bg);
@@ -27,10 +28,8 @@ a {
 }
 
 .nav {
-    list-style-type: none;
     padding: 0;
     margin: 0;
-
 }
 .top-nav{
     position: fixed;
@@ -66,7 +65,7 @@ a {
 }
 .container{
 margin-top:2em;
-    /*display: flex;*/
+    display: flex;
 }
 
 .profile-details{
@@ -93,7 +92,7 @@ margin-top:2em;
     background: var(--light-bg);
     font-weight: bold;
     padding: 8px;
-    border-border: 5px solid --se;
+    border-radius: 5px;
 
 
 }
