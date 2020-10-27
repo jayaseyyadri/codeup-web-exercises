@@ -1,0 +1,40 @@
+<!--h1 with the text ‘Media Queries’ that is text aligned to center for all screen sizes-->
+<!-- - mobile-first view with a blue background for body-->
+<!-- - 768px tablet view with purple background for body-->
+<!-- - 1200px desktop view with yellow background for body-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1">
+
+    <title>Media Query Exercise</title>
+
+    <style type="text/css">
+        body{
+            background: #3549cd;
+            text-align: center;
+        }
+        @media screen and (min-width: 768px) {
+            body {
+                background: #531480;
+                text-align: center;
+            }
+        }
+           @media screen and (min-width: 1200px) {
+                body {
+                    background: #cda235;
+                    text-align: center;
+                }
+            }
+        </style>
+</head>
+
+<body>
+<main class="container">
+    <h1>Media Queries</h1>
+</main>
+
+</body>
+</html>
