@@ -23,17 +23,15 @@
         #nav-order-tab{
             background-color: #bbc2c0;
         }
-        .navbar-main{
-            color: black;
-        }
+
     </style>
 
 </head>
 <body>
 <!--Nav bar-->
 <div>
-    <nav class="navbar-main">
-        <div class="nav nav-tabs bg-light text-secondary" style="background-color: #cad0cc" id="nav-tab" role="tablist">
+    <nav class="navbar-main ">
+        <div class="nav nav-tabs bg-light " style="background-color: #cad0cc" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Pizza World</a>
                 <a class="nav-item nav-link active" id="nav-order-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Order online</a>
                 <a class="nav-item nav-link" id="nav-menu-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Menu</a>
@@ -42,9 +40,9 @@
             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"></div>
                 <form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search stores near you!</button>
                 </form>
-                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fas fa-user"></i>
+                <a class="nav-item nav-link text-right" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fas fa-user"></i>
                     Sign up
                 </a>
         </div>
@@ -55,8 +53,8 @@
 <main class="container">
 
     <!--Jumbotron-->
-    <header class="jumbotron px-0 mt-5 .d-sm-none .d-md-block">
-        <h1 class="text-center bg-light">Welcome to Pizza World</h1>
+    <header class="jumbotron px-0 mt-5 .d-none .d-sm-none .d-md-block">
+        <h1 class="text-center bg-light .d-sm-none .d-md-block">Welcome to Pizza World</h1>
     </header>
 
     <h2>Build your own pizza!</h2>
@@ -82,17 +80,16 @@
         <!-- Tab Pane 1   -->
             <div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="size-tab">
 
-                        <div class="card">
-
-                            <div class="card-header bg-primary text-white">
-                                Choose Toppings
-                            </div>
-                            <div class="card-body"></div>
-                            <div class="card mb-3">
-                                <div class="card-header">
+               <div class="card">
+                   <div class="card-header bg-primary text-white">
+                       Choose Toppings
+                   </div>
+                    <div class="card-body"></div>
+                        <div class="card mb-3">
+                    <div class="card-header">
                                     Hand Tossed
                                 </div>
-                                <div class="card-body">
+                     <div class="card-body">
                                     Garlic seasoned crust with a rich, buttery taste.
                                 </div>
                                 <ul class="list-group">
@@ -111,156 +108,64 @@
                                     <div class="card-body">
                                         Thin enough for optimum crispy to crunchy ratio
                                     </div>
-                                    <ul class="list-group">
+                                <ul class="list-group">
                                         <li class="list-group-item">
                                             <label for="thinMedium">Medium (12")</label>
                                             <input type="radio" name="crust" id="thinMedium">
-
                                         </li>
                                         <li class="list-group-item">
                                             <label for="thinLarge">Large (14")</label>
                                             <input type="radio" name="crust" id="thinLarge">
-
+                                        </li>
                                     </ul>
-                                    <div class="footer-flex justify-content-end ">
+                                <div class="footer-flex justify-content-end ">
                                         <button class="bth btn-primary">Next Step ></button>
-                                    </div>
                                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--                    &lt;!&ndash; Tab Pane 2   &ndash;&gt;-->
-<!--                    <div class="tab-pane fade" id="Cheese" role="tabpanel" aria-labelledby="Cheese-tab">...</div>-->
-<!--                    <div class="card">-->
-
-<!--                        <div class="card-header bg-primary text-white">-->
-<!--                            Choose Toppings-->
-<!--                        </div>-->
-<!--                        <div class="card-body"></div>-->
-<!--                        <div class="card mb-3">-->
-<!--                            <div class="card-header">-->
-<!--                                Hand Tossed-->
-<!--                            </div>-->
-<!--                            <div class="card-body">-->
-<!--                                Garlic seasoned crust with a rich, buttery taste.-->
-<!--                            </div>-->
-<!--                            <ul class="list-group">-->
-<!--                                <li class="list-group-item">-->
-<!--                                    <label for="handTossedSmall">Small (10")</label>-->
-<!--                                    <input type="radio" name="crust" id="handTossedSmall">-->
-<!--                                </li>-->
-<!--                                <li class="list-group-item">-->
-<!--                                    <label for="handTossedMedium">Medium (12")</label>-->
-<!--                                    <input type="radio" name="crust" id="handTossedMedium">-->
-<!--                            </ul>-->
-<!--                            <div class="card">-->
-<!--                                <div class="card-header">-->
-<!--                                    Crispy Thin-->
-<!--                                </div>-->
-<!--                                <div class="card-body">-->
-<!--                                    Thin enough for optimum crispy to crunchy ratio-->
-<!--                                </div>-->
-<!--                                <ul class="list-group">-->
-<!--                                    <li class="list-group-item">-->
-<!--                                        <label for="thinMedium">Medium (12")</label>-->
-<!--                                        <input type="radio" name="crust" id="thinMedium">-->
-
-<!--                                    </li>-->
-<!--                                    <li class="list-group-item">-->
-<!--                                        <label for="thinLarge">Large (14")</label>-->
-<!--                                        <input type="radio" name="crust" id="thinLarge">-->
-
-<!--                                </ul>-->
-<!--                                <div class="footerd-flex justify-content-end ">-->
-<!--                                    <button class="bth btn-primary">Next Step ></button>-->
-<!--                                </div>-->
-<!--                            </div>-->
-
-<!--                </div>-->
-<!--                &lt;!&ndash; Tab Pane 3   &ndash;&gt;-->
-<!--                        <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">...</div>-->
-<!--                        <div class="card">-->
-
-<!--                            <div class="card-header bg-primary text-white">-->
-<!--                                Choose size and crust-->
-<!--                            </div>-->
-<!--                            <div class="card-body"></div>-->
-<!--                            <div class="card mb-3">-->
-<!--                                <div class="card-header">-->
-<!--                                    Hand Tossed-->
-<!--                                </div>-->
-<!--                                <div class="card-body">-->
-<!--                                    Garlic seasoned crust with a rich, buttery taste.-->
-<!--                                </div>-->
-<!--                                <ul class="list-group">-->
-<!--                                    <li class="list-group-item">-->
-<!--                                        <label for="handTossedSmall">Small (10")</label>-->
-<!--                                        <input type="radio" name="crust" id="handTossedSmall">-->
-<!--                                    </li>-->
-<!--                                    <li class="list-group-item">-->
-<!--                                        <label for="handTossedMedium">Medium (12")</label>-->
-<!--                                        <input type="radio" name="crust" id="handTossedMedium">-->
-<!--                                </ul>-->
-<!--                                <div class="card">-->
-<!--                                    <div class="card-header">-->
-<!--                                        Crispy Thin-->
-<!--                                    </div>-->
-<!--                                    <div class="card-body">-->
-<!--                                        Thin enough for optimum crispy to crunchy ratio-->
-<!--                                    </div>-->
-<!--                                    <ul class="list-group">-->
-<!--                                        <li class="list-group-item">-->
-<!--                                            <label for="thinMedium">Medium (12")</label>-->
-<!--                                            <input type="radio" name="crust" id="thinMedium">-->
-
-<!--                                        </li>-->
-<!--                                        <li class="list-group-item">-->
-<!--                                            <label for="thinLarge">Large (14")</label>-->
-<!--                                            <input type="radio" name="crust" id="thinLarge">-->
-
-<!--                                    </ul>-->
-<!--                                    <div class="footerd-flex justify-content-end ">-->
-<!--                                        <button class="bth btn-primary">Next Step ></button>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-
-
-<!--                    </div>-->
+                                </div>
                             </div>
-    </div>
-
                         </div>
+            </div>
+<!--       Tab pane 2-->
+            <div class="card-header bg-primary text-white">
+                Choose size and sauce
+            </div>
+            <div class="card-body"></div>
+            <div class="card mb-3">
+                <div class="card-header">
+                    How Much?
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
     </form>
 </main>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+<script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
