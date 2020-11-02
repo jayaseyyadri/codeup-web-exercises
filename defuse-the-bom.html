@@ -14,6 +14,9 @@
     "use strict";
 
     var detonationTimer = 5;
+    var interval=1000;
+
+
 
     // TODO: This function needs to be called once every second
     function updateTimer() {
@@ -26,15 +29,14 @@
 
         detonationTimer--;
     }
-    setInterval(updateTimer,2000);
+    var reset=setInterval(updateTimer,interval);
 
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
-        clearInterval(updateTimer)
+      clearInterval(reset);
     }
 
-    console.log(defuseTheBOM());
     // Don't modify anything below this line!
     //
     // This causes the defuseTheBOM() function to be called
