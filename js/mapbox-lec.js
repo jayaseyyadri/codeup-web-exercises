@@ -3,6 +3,13 @@
  *********************************************/
 // TODO TOGETHER: Open .gitignore and add keys.js. Add keys.js file and import to mapbox html file. Your api keys are stored in keys.js and are added to the .gitignore so they are protected
 
+
+
+
+
+
+
+
 /**********************************************
  * 			CUSTOMIZING THE MAP
  *********************************************/
@@ -12,8 +19,43 @@
 
 //TODO TOGETHER: Set map to san antonio area using the coordinates [-98.4916, 29.4252]
 
-//TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the mapbox docs. (~10 minutes)
+mapboxgl.accessToken =mapboxToken;
 
+
+// var map = new mapboxgl.Map({
+//     container: 'map',
+//     style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+//     center: [-98.4916, 29.4252], // starting position [lng, lat]
+//     zoom: 9 // starting zoom
+// });
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/satellite-streets-v11',// stylesheet location
+    center: [-98.4916, 29.4252], // starting position [lng, lat]
+    zoom: 9, // starting zoom
+    pitchWithRotate:true
+});
+
+// var map2 = new mapboxgl.Map({
+//     container: 'map2',
+//     style: 'mapbox://styles/mapbox/outdoors-v11',// stylesheet location
+//     center: [-98.4916, 29.4252], // starting position [lng, lat]
+// //     zoom: 2 // starting zoom
+// });
+
+
+
+
+//TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the mapbox docs. (~10 minutes)
+ var markerOption ={
+     color:'#ff0000',
+     draggable:true
+ }
+
+var alamoM=new mapboxgl.Marker(markerOption)
+    .setLngLat([-98.4861, 29.4260])
+    .addTo(map);
 
 /**********************************************
  * 					MARKERS
@@ -39,6 +81,12 @@
 
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
+
+var popup = new mapboxgl.Popup()
+    .setLngLat([-98.489615, 29.426827])
+    .setHTML("<h6>Codeup Rocks!</h6>")
+    .addTo(map);
+
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the alamo marker.
 
 
