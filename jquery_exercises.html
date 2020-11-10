@@ -8,12 +8,44 @@
     <title>Document</title>
 </head>
 <body>
+
+<h1 id="header"> Introduction to jQuery</h1>
+
+<p id ='para1'>
+    Checklist to learn jQuery
+</p>
+<ul class="codeup">
+    <li class="checklist1"> Knowledge of Html</li>
+    <li class="checklist2"> Knowledge of Javascript</li>
+    <li class="checklist"> Knowledge of CSS</li>
+    <li class="checklist4"> Will to experiment!!</li>
+</ul>
+
 <script src="js/jquery-2.2.4.js"></script>
 
 <script>
     $(document).ready(function() {
-        alert("DOM has finished loading")
-    });
+        // alert("DOM has finished loading")
+
+var para=$("#para1").html("Hello world!")
+alert(para.html());
+
+// var heading=$('#header').html("Things to consider before learning JS")
+//console.log(alert(heading));
+//
+//  $(".checklist").css("border","2px solid green");
+//  $(".codeup").css('border','1px solid red')
+
+// $('li').css('font-size','20px')
+
+// $('h1, p, li').css('color','blue');
+
+
+     });
+
+
+
+
 </script>
 </body>
 </html>
