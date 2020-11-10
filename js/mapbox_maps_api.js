@@ -49,6 +49,23 @@ var shwarma =new mapboxgl.Marker(markerOptionC)
 
 
 
+// ------------------------------------------------------------
+    var favoriteEatSpots=[{
+        name:'Berni',
+        address:'',
+        description:"The best Pho in town!"
+    },
+    {
+       name: 'Las palapas',
+       address: '',
+       description: "The best tacos in town "
+    },
+      { name:'Biryani Pot',
+        address:'',
+        description:"The best biryani in town"}
 
+    ]
 
-
+favoriteEatSpots.forEach(function (favoriteSpot){
+    console.log(favoriteSpot);
+});
