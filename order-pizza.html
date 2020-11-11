@@ -25,6 +25,14 @@
         }
     .nav-link{
         color: black;
+
+    }
+    .next{
+        width: 7vw;
+        align-self: flex-end;
+        top:0;
+        right: 0;
+
     }
     </style>
 
@@ -33,7 +41,7 @@
 <!--Nav bar-->
 <div>
     <nav class="navbar-main ">
-        <div class="nav nav-tabs bg-light  " style="background-color: #cad0cc" id="nav-tab" role="tablist">
+        <div class="nav nav-tabs bg-light " style="background-color:#cad0cc" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Pizza World</a>
                 <a class="nav-item nav-link active" id="nav-order-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Order online</a>
                 <a class="nav-item nav-link" id="nav-menu-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Menu</a>
@@ -83,9 +91,11 @@
                <div class="card">
                    <div class="card-header bg-primary text-white">Choose size and crust</div>
                    <div class="cardInner mb-3">
-                     <div class="card-header">Hand Tossed</div>
-                     <div class="card-body">Garlic seasoned crust with a rich, buttery taste.</div>
-                        <div class="card" style="width: 100%">
+
+                   <div class="card mx-3 my-3 " style="width: 80%">
+                   <div class="card-header">Hand Tossed</div>
+                   <div class="card-body">Garlic seasoned crust with a rich, buttery taste.</div>
+                        <div class="card " style="width: 100% "  >
                            <ul class="list-group">
                               <li class="list-group-item">
                                  <label for="handTossedSmall">Small (10")</label>
@@ -97,8 +107,9 @@
                               </li>
                            </ul>
                         </div>
-                   </div>
+                       </div>
                </div>
+             <div class="card mx-3 my-3">
                <div class="cardInner">
                    <div class="card-header">Crispy Thin</div>
                    <div class="card-body">Thin enough for optimum crispy to crunchy ratio</div>
@@ -113,9 +124,12 @@
                          </li>
                       </ul>
                </div>
-               <div class="footer-flex text-muted justify-content-end ">
-                     <button class="bth btn-secondary">Next Step ></button>
+             </div>
+                   <div class="card ">
+                     <button class="bth btn-primary next">Next Step ></button>
                </div>
+               </div>
+
             </div>
     </div>
 
