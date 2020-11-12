@@ -27,8 +27,8 @@
     $(document).ready(function() {
         // alert("DOM has finished loading")
 
-var para=$("#para1").html("Hello world!")
-alert(para.html());
+// var para=$("#para1").html("Hello world!")
+// alert(para.html());
 
 // var heading=$('#header').html("Things to consider before learning JS")
 //console.log(alert(heading));
@@ -37,14 +37,22 @@ alert(para.html());
 //  $(".codeup").css('border','1px solid red')
 
 // $('li').css('font-size','20px')
-
 // $('h1, p, li').css('color','blue');
 
+        $('#header').click(function () {
+            $(this).css('backgroundColor', 'red');
+        })
+        $('p').dblclick(function () {
+            $(this).css('fontSize', '18px')
+        });
 
-     });
+        $('li').hover(function () {
+            $(this).css('color', 'red');
+        }, function () {
+            $(this).css('color', 'black');
+        })
 
-
-
+    })
 
 </script>
 </body>
