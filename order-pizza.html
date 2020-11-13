@@ -28,8 +28,7 @@
 
     }
     .next{
-        width: 7vw;
-        align-self: flex-end;
+]        align-self: flex-end;
         top:0;
         right: 0;
 
@@ -125,7 +124,7 @@
                       </ul>
                </div>
              </div>
-                   <div class="card ">
+                   <div class="card-header text-right">
                      <button class="bth btn-primary next">Next Step ></button>
                </div>
                </div>
@@ -140,13 +139,15 @@
             <div class="card-header bg-primary text-white">Choose cheese and sauce</div>
             <div class="cardInner mb-3">
                 <div class="card-header">Cheese?</div>
-                <div class="card mb-3 mt-3 ml-3 mr-3">How much?
+                <div class="card mb-3 mt-3 ml-3 mr-3">
+                    <div class="card-body">How much?
                     <select class="custom-select" id="inputGroupSelect01">
                         <option value="1">Light </option>
                         <option value="2" selected>Regular</option>
                         <option value="3">Extra</option>
                         <option value="3">Double</option>
                     </select>
+                </div>
                 </div>
             </div>
         <div class="cardInner">
@@ -156,7 +157,7 @@
                 <div class="cardInner mb-3">
                 <select class="custom-select" id="inputGroupSelect02">
                         <option value="1" >Tomato sauce </option>
-                        <option value="2" selected >Robust inspired Tomato Sauce </option>
+                        <option value="2" selected>Robust inspired Tomato Sauce </option>
                         <option value="3">Marinara sauce</option>
                         <option value="4">BBQ</option>
                         <option value="5">Alfredo</option>
@@ -167,19 +168,86 @@
                 <div class="card-body">How much?
                     <div class="cardInner mb-3">
                     <select class="custom-select" id="inputGroupSelect03">
-                        <option value="1" selected>Light </option>
+                        <option value="1" >Light </option>
                         <option value="2">Normal</option>
                         <option value="3">Extra</option>
+                        <option value="3" selected>Regular</option>
+
                     </select>
                 </div>
              </div>
 
-                <div class="footer-flex text-muted justify-content-end ">
-                    <button class="bth btn-secondary"> < previous step Next Step ></button>
+                <div class= "card`-header text-right" >
+                    <button class="bth btn-primary"> < previous step Next Step ></button>
              </div>
         </div>
         </div>
     </div>
+
+<!--    TAB 3 -->
+    <div class="tab-pane fade show active" id="topping" role="tabpanel" aria-labelledby="sauce-tab">
+
+        <div class="card">
+            <div class="card-header bg-primary text-white">Choose Toppings</div>
+            <div class="cardInner mb-3">
+                <div class="card-header">Choose Meats?</div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <label for="beef">Beef</label>
+                                <input type="checkbox" name="meats" id="beef">
+                            </li><li class="list-group-item">
+                                <label for="ham">Ham </label>
+                                <input type="checkbox" name="meats" id="ham">
+                            </li><li class="list-group-item">
+                                <label for="philly">Philly Steak</label>
+                                <input type="checkbox" name="meats" id="Philly">
+                            </li><li class="list-group-item">
+                                <label for="bacon">Bacon</label>
+                                <input type="checkbox" name="meats" id="bacon">
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            <div class="cardInner">
+                <div class="cardInner mb-3">
+                    <div class="card-header">Choose Non-Meats</div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <label for="mushrooms">Mushrooms</label>
+                            <input type="checkbox" name="toppings" id="mushrooms">
+                        </li>
+
+                        <li class="list-group-item">
+                        <label for="onions">Onions </label>
+                        <input type="checkbox" name="toppings" id="onions">
+                        </li>
+                        <li class="list-group-item">
+                            <label for="JalepenoPeppers"> </label>
+                        <input type="checkbox" name="toppings" id="JalepenoPeppers">
+                        </li>
+                        <li class="list-group-item">
+                        <label for="greenPepper"></label>
+                        <input type="checkbox" name="toppings" id="greenPepper">
+                        </li>
+                    </ul>
+
+                        </div>
+                    </div>
+
+                <div class= "card`-header text-right" >
+                    <button class="bth btn-primary">Checkout<i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </main>
 
 <script
