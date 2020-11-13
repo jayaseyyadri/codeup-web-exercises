@@ -1,3 +1,22 @@
 .invisible{
     visibility: hidden;
 }
+
+.container{
+  align-content: center;
+}
+.one{
+    background-image: url("htmlImages/animal1.jpg");
+    height: 40px;
+    width: 40px;
+}
+.two{
+    height: 40px;
+    width: 40px;
+    background-image: url("htmlImages/woman-happiness-sunrise-silhouette-40192.jpeg");
+}
+.three{
+    height: 40px;
+    width: 40px;
+    background-image: url("htmlImages/animal3.jpg");
+}

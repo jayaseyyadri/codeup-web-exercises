@@ -50,7 +50,7 @@ $(document).ready(function() {
      *   CSS
      ************/
 
-    // TODO TOGETHER:  Using an event listener and css method, increase the font-size of 'Sorting Hat' when clicked.
+    // TODO TOGETHER:  Using an event listener and `css` method, increase the font-size of 'Sorting Hat' when clicked.
     //    How can font size be changed using .html()?
         $('#main-heading').click(function (){
             $(this).css('font-size','75px')
@@ -131,7 +131,14 @@ $('#highlight-houses').click(function ()
      *********************************************/
 
     //TODO TOGETHER: Using the each method, highlight every other list item in the Ravenclaw house
+
+    $('li').each(function (index, element){
+        console.log(element);
+    })
+
     //TODO TOGETHER: Change the font color of the first list element in Hufflepuff
+  $('#hufflepuff').children().first().css()
+
     //TODO TOGETHER: Change the font color of the last list element in Slytherin
 
     //TODO TOGETHER: When the 'Witches' button is clicked, highlight all names that have been assigned the class of 'witches'
