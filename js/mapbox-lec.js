@@ -1,7 +1,7 @@
 // /**********************************************
-//  * 			SETTING UP KEYS.JS
-//  *********************************************/
-// // TODO TOGETHER: Open .gitignore and add keys.js. Add keys.js file and import to mapbox html file. Your api keys are stored in keys.js and are added to the .gitignore so they are protected
+ * 			SETTING UP KEYS.JS
+ *********************************************/
+// TODO TOGETHER: Open .gitignore and add keys.js. Add keys.js file and import to mapbox html file. Your api keys are stored in keys.js and are added to the .gitignore so they are protected
 //
 //
 //
@@ -36,7 +36,7 @@
 //     zoom: 9, // starting zoom
 //     pitchWithRotate:true
 // });
-<<<<<<< HEAD
+// <<<<<<< HEAD
 //
 // // var map2 = new mapboxgl.Map({
 // //     container: 'map2',
