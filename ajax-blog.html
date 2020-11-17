@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<h1> My blog posts ..Welcome ..Learn through experience!</h1>
+<div id="posts">
+    <h2>Title</h2>
+    <p>Content</p>
+    <p>Categories</p>
+    <div>date</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function (){
+      "use strict";
+    $.ajax('data/blog.json').done(function (data){
+    renderBlog(data)
+    });
+      function renderBlog(posts) {
+          var blogHtml = ""
+          posts.forEach(function (post) {
+              blogHtml += '<div>'
+              blogHtml += '<h2>' + post.title
+              blogHtml += '<p>' + post.content + '</p>'
+              blogHtml += '<p>' + post.categories + '</p>'
+              blogHtml += '<div>' + post.date + '</div>'
+          });
+          $('#posts').html(blogHtml);
+      }
+ })();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
