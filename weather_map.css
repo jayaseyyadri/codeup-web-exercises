@@ -1,0 +1,12 @@
+.card{
+    width:18rem;
+    align:right;
+}
+#weatherCards{
+float: right}
+
+#map {
+    width: 800px;
+    height: 400px;
+    float: left;
+}

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="weather_map.css">
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
 </head>
@@ -17,13 +18,14 @@
 <nav class="navbar navbar-light bg-light">
     <form class="form-inline">
 
-        <label for="searchBox"> Place</label> <input class="form-control mr-sm-2" type="search" placeholder="Search"
-                                                     aria-label="Search" id="searchBox">
+        <label for="searchBox"> Place</label> <input class="form-control mr-sm-2" type="text" placeholder="Search"
+                                                     aria-label="Search" id="searchBox" name="searchBox">
+       <ul class="list-group" id="result"></ul>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find</button>
     </form>
 </nav>
-<div id="weatherCards"></div>
-<div id='map' style='width: 400px; height: 300px;'></div>
+<div id='map' ></div>
+<div id="weatherCards" ></div>
 
 
 <!--jQuery,popper,bootstrap-->
@@ -43,20 +45,24 @@
     //getting weather of san antonio
     $(document).ready(function () {
         "use strict";
-        var j ;
-        $.get('https://api.openweathermap.org/data/2.5/onecall', {
-            appid: newKey,
-            lat: 29.423017,
-            lon: -98.48527,
-            exclude: 'minutely hourly'
-        }).done(function (data) {
-            console.log(data);
-            var a=''
-            for(var i =0;i<=5;i++){
-                a+=renderWeatherCards(data.daily,i);
-            }
-            $('#weatherCards').html(a);
-        })
+        var j;
+        var markerArr = [-98.568736, 29.524087];
+
+        function getWeather() {
+            $.get('https://api.openweathermap.org/data/2.5/onecall', {
+                appid: newKey,
+                lat: markerArr[1],
+                lon: markerArr[0],
+                exclude: 'minutely hourly',
+                units: 'imperial'
+            }).done(function (data) {
+                var a = ''
+                for (var i = 0; i < 5; i++) {
+                    a += renderWeatherCards(data.daily, i);
+                }
+                $('#weatherCards').html(a);
+            })
+        }
 
 //generate map via geocode
         function geocode(search, token) {
@@ -86,20 +92,22 @@
         var newMarker = new mapboxgl.Marker(markerOption)
             .setLngLat([-98.568736, 29.524087])
             .addTo(map)
+        newMarker.on('dragend', marker)
+
 // render html for weatherCards
-        function renderWeatherCards(data,j){
-             var html=`<div class="card">`;
-             var html=`<div class="card-body">`;
-                html+=`<p>${timeConverter(data[j].dt)}</p>`;
-                html+=`<p>${(data[j].feels_like.day)}</p>`;
-                html+=`<p>${(data[j].feels_like.eve)}</p>`;
-                html+=`<p>Today's high:${data[j].temp.max}</p>`;
-                html+=`<p>Today's low:${data[j].temp.min}</p>`;
-                html+=`</div></div>`;
-                    return html;
+        function renderWeatherCards(data, j) {
+            var html = `<div class="card" >`;
+            html += `<div class="card-body">`;
+            html += `<p>${timeConverter(data[j].dt)}</p>`;
+            html += `<p>${(data[j].feels_like.day)}</p>`;
+            html += `<p>${(data[j].feels_like.eve)}</p>`;
+            html += `<p>Today's high:${data[j].temp.max}</p>`;
+            html += `<p>Today's low:${data[j].temp.min}</p>`;
+            html += `</div></div>`;
+            return html;
         }
-renderWeatherCards()
-        function timeConverter(unix){
+// in second seconds needs to be rendered n ms==>
+        function timeConverter(unix) {
             let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
             let d = new Date(unix * 1000);
             let year = d.getFullYear();
@@ -109,41 +117,19 @@ renderWeatherCards()
             return `${day} ${m} ${year}`;
         }
 
+        function marker() {
+            markerArr = [];
+            var location = newMarker.getLngLat()
+            markerArr[0] = (location.lng);
+            markerArr[1] = (location.lat);
+            getWeather();
+        }
 
+$('#searchBox').keyup(function (){
+    $('#result').html('');
 
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//call for 5 days weather
-
-        // $.get('http://api.openweathermap.org/data/2.5/onecall/timemachine', {
-        //     lat: 29.423017,
-        //     lon: -98.48527,
-        //     dt: ,
-        //     q: 'San Antonio,US'
-        //     appid: newKey,
-        // }).done(function () {
-        //
-        // })
-        //closing brace for jQuery
     });
 
 
