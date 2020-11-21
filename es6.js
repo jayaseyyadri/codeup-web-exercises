@@ -71,6 +71,11 @@ users.forEach(function(user) {
   return names.push(user.name);
 });
 
+
+
+
+
+
 // TODO: replace `var` with `let` in the following declaration
 var developers = [];
 users.forEach(function(user) {
