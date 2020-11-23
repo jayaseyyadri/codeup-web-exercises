@@ -84,14 +84,9 @@
 
     $(document).ready(function() {
         $('#facts').click(function() {
-            $('dd').addClass('invisible')
+            $('dd').toggleClass('invisible')
         });
 
-
-        $('#facts').click(function (){
-            $('dd').next().toggleClass('invisible')
-
-        })
         $('#buttonSubmit').click(function (){
             $("li:last-child").css('background-color','yellow')
         })
