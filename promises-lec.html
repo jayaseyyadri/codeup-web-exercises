@@ -12,7 +12,7 @@
     <div id="articles"></div>
 
 </main>
-<script src="keys.js"></script>
+<script src="js/keys.js"></script>
 <script
         src="https://code.jquery.com/jquery-3.4.0.min.js"
         integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
@@ -24,61 +24,61 @@
     // ====================================================================================
     // ==================================== PROMISES ======================================
     // ====================================================================================
-
-    /*
-        A promise is a wrapper for asynchronous data/actions.
-
-        Promises make writing asynchronous JS code cleaner (avoiding "callback hell" nesting).
-
-        Working with jQuery AJAX requests (jqXhr) is very similar to promises
-        (can even use promises in later version of jQuery!).
-
-        Promises have now become VERY common in both client and server side JS.
-
-        You will very likely handle promises far more often than having to create them.
-    */
-
-
-    // ============ Basic Example of Promise Creation and Handling
-
-    let goodKid = true;
-
-    // a promise is made to do something
-            // --> definig a promise ----->
-    // resolve & reject are call back functions ,if else--> what will happen when resolved and what will happen when rejected
-    //what we get n=back is a promiseconst
-
-    var getCake = new Promise((resolve, reject) => {
-        if (goodKid) {
-            resolve("Here is some cake");
-        } else {
-            reject("Bad. No cake. :(");
-        }
-    });
-
-    console.log(getCake); // promise object
-
-
-    //--handling a promise-->
-    // once the promise is resolved or rejected, take additional action
-
-
-    getCake.then((data) => {
-        console.log(data);
-    }).catch((err) => {
-        console.log(err);
-    });
-
-    // ============ Using Promises with jQuery version 3+
-
-    // jQuery AJAX methods
-    //     $.ajax('https://swapi.dev/api/people/1')
-    //         .done(function(data) {
-    //             console.log(data);
-    //         })
-    //         .fail(function(jqXHR, message) {
-    //             console.log(message);
-    //         });
+    //
+    // /*
+    //     A promise is a wrapper for asynchronous data/actions.
+    //
+    //     Promises make writing asynchronous JS code cleaner (avoiding "callback hell" nesting).
+    //
+    //     Working with jQuery AJAX requests (jqXhr) is very similar to promises
+    //     (can even use promises in later version of jQuery!).
+    //
+    //     Promises have now become VERY common in both client and server side JS.
+    //
+    //     You will very likely handle promises far more often than having to create them.
+    // */
+    //
+    //
+    // // ============ Basic Example of Promise Creation and Handling
+    //
+    // let goodKid = true;
+    //
+    // // a promise is made to do something
+    //         // --> definig a promise ----->
+    // // resolve & reject are call back functions ,if else--> what will happen when resolved and what will happen when rejected
+    // //what we get n=back is a promiseconst
+    //
+    // var getCake = new Promise((resolve, reject) => {
+    //     if (goodKid) {
+    //         resolve("Here is some cake");
+    //     } else {
+    //         reject("Bad. No cake. :(");
+    //     }
+    // });
+    //
+    // console.log(getCake); // promise object
+    //
+    //
+    // //--handling a promise-->
+    // // once the promise is resolved or rejected, take additional action
+    //
+    //
+    // getCake.then((data) => {
+    //     console.log(data);
+    // }).catch((err) => {
+    //     console.log(err);
+    // });
+    //
+    // // ============ Using Promises with jQuery version 3+
+    //
+    // // jQuery AJAX methods
+    // //     $.ajax('https://swapi.dev/api/people/1')
+    // //         .done(function(data) {
+    // //             console.log(data);
+    // //         })
+    // //         .fail(function(jqXHR, message) {
+    // //             console.log(message);
+    // //         });
 
     // // Using promise methods (jQuery version 3.x.x and after)
     //     $.ajax('https://swapi.dev/api/people/1')
@@ -88,8 +88,8 @@
     //         .catch(function(jqXHR, message) {
     //             console.log(message);
     //         });
-
-
+    //
+    //
 
 
 
@@ -99,7 +99,7 @@
     // ============ Fetch API
 
     // jQuery AJAX request example
-    // $.ajax('https://swapi.co/api/people/1')
+    // $.ajax('https://swapi.dev/api/people/1')
     //     .done(function(data) {
     //         console.log(data);
     //     })
@@ -108,7 +108,7 @@
     //     });
 
     // Fetch API GET example
-    //     fetch('https://swapi.co/api/people/1')
+    //     fetch('https://swapi.dev/api/people/1')
     //         .then((response) => {
     //             return response.json();
     //         })
@@ -116,6 +116,18 @@
     //             console.log(data);
     //         })
     //         .catch(console.log);
+
+
+
+
+        fetch('https://swapi.dev/api/people/1')
+            .then((response)=> {
+                return response.json();
+            })
+            .then((data)=>{
+                console.log(data);
+             })
+                .catch(console.log);
 
     // Fetch API POST example
 
