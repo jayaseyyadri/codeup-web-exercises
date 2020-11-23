@@ -12,10 +12,6 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <style>
-        header {
-            background-image: url("htmlImages/pizza.png");
-        }
-
         header h1 {
             opacity: .7;
             font-weight: 400;
@@ -31,7 +27,19 @@
 ]        align-self: flex-end;
         top:0;
         right: 0;
-
+    }
+    .jumbotron{
+        background-image: url("htmlImages/pizza.png");
+        background-size: cover;
+        position: relative;
+    }
+    .welcome{
+        z-index: 55;
+        position: absolute;
+        right: 0;
+        bottom: 40px;
+        left: 0;
+        opacity: .5;
     }
     </style>
 
@@ -40,7 +48,7 @@
 <!--Nav bar-->
 <div>
     <nav class="navbar-main ">
-        <div class="nav nav-tabs bg-light " style="background-color:#cad0cc" id="nav-tab" role="tablist">
+        <div class="nav nav-tabs bg-light " style="background-color:#cad0cc" id="nav-tab2" role="tablist">
                 <a class="nav-item nav-link " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Pizza World</a>
                 <a class="nav-item nav-link active" id="nav-order-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Order online</a>
                 <a class="nav-item nav-link" id="nav-menu-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Menu</a>
@@ -62,8 +70,9 @@
 <main class="container">
 
     <!--Jumbotron-->
-    <div class="jumbotron jumbotron-fluid px-0 mt-5 .d-none .d-sm-none .d-md-block">
-        <h1 class="text-center bg-light .d-sm-none .d-md-block">Welcome to Pizza World</h1>
+    <div class="jumbotron jumbotron-fluid px-0 mt-5 .d-none .d-sm-none .d-md-block ">
+        <h1 class="text-center bg-light .d-sm-none .d-md-block welcome">Welcome to Pizza World</h1>
+
     </div>
     <h2>Build your own pizza!</h2>
 
@@ -135,7 +144,59 @@
     </div>
 
 <!--       Tab pane 2-->
-    <div class="tab-pane fade show" id="sauce" role="tabpanel" aria-labelledby="sauce-tab">
+
+
+    <div>
+        <nav class="navbar-main ">
+            <div class="nav nav-tabs bg-light " style="background-color:#cad0cc" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link " id="nav-home-tab2" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Pizza World</a>
+                <a class="nav-item nav-link active" id="nav-order-tab2" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Order online</a>
+                <a class="nav-item nav-link" id="nav-menu-tab2" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Menu</a>
+                    <div class="tab-pane fade show active" id="nav-home2" role="tabpanel" aria-labelledby="nav-home-tab"></div>
+                    <div class="tab-pane fade" id="nav-profile2" role="tabpanel" aria-labelledby="nav-profile-tab"></div>
+                    <div class="tab-pane fade" id="nav-contact2" role="tabpanel" aria-labelledby="nav-contact-tab"></div>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search stores near you!</button>
+                    </form>
+                    <a class="nav-item nav-link text-right" id="nav-contact-tab2" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fas fa-user"></i>
+                        Sign up
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!--Container-->
+    <main class="container">
+
+        <!--Jumbotron-->
+        <div class="jumbotron jumbotron-fluid px-0 mt-5 .d-none .d-sm-none .d-md-block " >
+            <h1 class="text-center bg-light .d-sm-none .d-md-block">Welcome to Pizza World</h1>
+
+        </div>
+        <h2>Build your own pizza!</h2>
+
+        <!--nav tabs-->
+        <ul class="nav nav-tabs" id="myTab2" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="size-tab2" data-toggle="tab" href="#size" role="tab" aria-controls="size"
+                   aria-selected="true"><span class="badge badge-pill badge-secondary">1</span> Size and Crust</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="Cheese-tab2" data-toggle="tab" href="#Cheese" role="tab" aria-controls="Cheese"
+                   aria-selected="false"><span class="badge badge-pill badge-secondary">2</span> Cheese and Sauce</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="toppings-tab2" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings"
+                   aria-selected="false"><span class="badge badge-pill badge-secondary">3</span> Toppings</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent2">
+
+
+
+        <div class="tab-pane fade show" id="sauce" role="tabpanel" aria-labelledby="sauce-tab">
 
         <div class="card">
             <div class="card-header bg-primary text-white">Choose cheese and sauce</div>
@@ -195,18 +256,22 @@
                 <div class="card-header">Choose Meats?</div>
                         <ul class="list-group">
                             <li class="list-group-item">
-                                <label for="beef">Beef</label>
                                 <input type="checkbox" name="meats" id="beef">
+                                <label for="beef">Beef</label>
+
                             </li><li class="list-group-item">
-                                <label for="ham">Ham </label>
                                 <input type="checkbox" name="meats" id="ham">
-                            </li><li class="list-group-item">
-                                <label for="philly">Philly Steak</label>
+                            <label for="ham">Ham </label>
+
+                        </li><li class="list-group-item">
                                 <input type="checkbox" name="meats" id="Philly">
-                            </li><li class="list-group-item">
-                                <label for="bacon">Bacon</label>
+                            <label for="philly">Philly Steak</label>
+
+                        </li><li class="list-group-item">
                                 <input type="checkbox" name="meats" id="bacon">
-                            </li>
+                            <label for="bacon">Bacon</label>
+
+                        </li>
                         </ul>
                     </div>
 
@@ -221,28 +286,32 @@
                     <div class="card-header">Choose Non-Meats</div>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <label for="mushrooms">Mushrooms</label>
                             <input type="checkbox" name="toppings" id="mushrooms">
+                            <label for="mushrooms">Mushrooms</label>
+
                         </li>
 
                         <li class="list-group-item">
-                        <label for="onions">Onions </label>
                         <input type="checkbox" name="toppings" id="onions">
+                            <label for="onions">Onions </label>
+
                         </li>
                         <li class="list-group-item">
-                            <label for="JalepenoPeppers"> </label>
                         <input type="checkbox" name="toppings" id="JalepenoPeppers">
+                            <label for="JalepenoPeppers"> Jalepeno Peppers</label>
+
                         </li>
                         <li class="list-group-item">
-                        <label for="greenPepper"></label>
                         <input type="checkbox" name="toppings" id="greenPepper">
+                            <label for="greenPepper">Green Pepper</label>
+
                         </li>
                     </ul>
 
                         </div>
                     </div>
 
-                <div class= "card`-header text-right" >
+                <div class= "card-header text-right" >
                     <button class="bth btn-primary">Checkout<i class="fas fa-shopping-cart"></i></button>
                 </div>
             </div>
@@ -263,6 +332,6 @@
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
 
-
+</main>
 </body>
 </html>
