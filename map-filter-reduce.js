@@ -77,13 +77,16 @@ let emailAddress=users.map(function (n){
 
 
 // //BONUS
-// var unik=users.reduce(function (uniqueLangs,user){
-//     if (uniqueLangs ==''){
-//         uniqueLangs=user.languages
-//     }else{
-//         uniqueLangs +=user.languages
-//     }
-//
-//     return user
-// },'')
-// console.log(unik);
+var unik=users.reduce(function (uniqueLangs,user){
+    if (uniqueLangs ==[]){
+        uniqueLangs=user.languages
+    }else{
+        uniqueLangs +=user.languages
+    }
+
+    return uniqueLangs
+},[])
+console.log(unik);
+// const uniqueLangs= new Set(unik);
+// // const arrUnique=Array.from(uniqueLangs);
+// console.log(uniqueLangs);
