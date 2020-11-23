@@ -38,61 +38,25 @@
 
 
     (function() {
-        // "use strict";
-        // // // TODO: Uncomment next line and get the main header element by id
-        // // var mainHeader =document.getElementById('main-header') ;
-        // //
-        // // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        // // // mainHeader.innerHTML=("JavaScript is Cool");
-        // //
-        // // // TODO: Uncomment the next line and get the sub header element by id
-        // // var subHeader =document.getElementById('sub-header') ;
-        // //
-        // // // TODO: Set the text color of subHeader to blue
-        // // // subHeader.style.color='blue';
-        // //
-        // // // TODO: Uncomment the next line and get all list items
-        // // var listItems =document.getElementsByTagName('li') ;
-        // //
-        // // // TODO: Set text color on every other list item to grey
-        // // // TODO: Set text color of li with dbid = 1 to blue
-        // //
-        // // // for(var i=0;i<listItems.length;i++){
-        // // //     if(listItems[i].getAttribute('data-dbid')==='1'){
-        // // //         listItems[i].style.color='blue';
-        // // //         continue;
-        // // //     }
-        // // //     if(i%2!==0){
-        // // //         listItems[i].style.color='grey';
-        // // //     }
-        // // // }
-        // //
-        // // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        // // var subParagraphs = document.getElementsByClassName('sub-paragraph');
-        // //
-        // // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        // // // subParagraphs[0].innerText="Mission Accomplished";
+        "use strict";
+        // TODO: Uncomment next line and get the main header element by id
+        var mainHeader =document.getElementById('main-header') ;
 
-        //----------------------------------------------------------------------------------------------------
-        //
-        // // // TODO: Uncomment next line and get the main header element by id
-        // buttonOne =document.getElementById('btn1') ;
-        // //
         // // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        // buttonOne.innerHTML=("JavaScript is Cool");
-        // //
-        // // // TODO: Uncomment the next line and get the sub header element by id
-        // buttonTwo =document.getElementById('btn2') ;
+        // mainHeader.innerHTML=("JavaScript is Cool");
+        //
+        // // TODO: Uncomment the next line and get the sub header element by id
+        var subHeader =document.getElementById('sub-header') ;
         // //
         // // // TODO: Set the text color of subHeader to blue
-        // buttonTwo.style.color='blue';
-        // //
+        // subHeader.style.color='blue';
+        //
         // // // TODO: Uncomment the next line and get all list items
-        // // var listItems =document.getElementsByTagName('li') ;
+        var listItems =document.getElementsByTagName('li') ;
         // //
         // // // TODO: Set text color on every other list item to grey
         // // // TODO: Set text color of li with dbid = 1 to blue
-        //
+        // //
         // for(var i=0;i<listItems.length;i++){
         //     if(listItems[i].getAttribute('data-dbid')==='1'){
         //         listItems[i].style.color='blue';
@@ -102,52 +66,48 @@
         //         listItems[i].style.color='grey';
         //     }
         // }
-        //
+        // //
         // // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        //  buttonThree= document.getElementsByClassName('sub-paragraph');
+        var subParagraphs = document.getElementsByClassName('sub-paragraph');
         // //
         // // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        // // // subParagraphs[0].innerText="Mission Accomplished";
-
+        // subParagraphs[0].innerText="Mission Accomplished";
+        //----------------------------------------------------------------------------------------------------
+        //
 
         //----------------------------------------------------------------------------------------------------
 
         //    add event listener to button 1
-
-        //
-        //     btn1.addEventListener('click', btn1){
-        //     var listener=function () {
-        //         var mainHeader = document.getElementById('main-header')
-        //         mainHeader.innerHTML = ("JavaScript is Cool");
-        //         var buttonOne = document.getElementById('btn1');
-        //     }
-        //     //    add event listener to button 2
-        //
-        //
-        //     //    add event listener to button 3
-        //
-        //     for (var i = 0; i < listItems.length; i++) {
-        //         if (listItems[i].getAttribute('data-dbid') === '1') {
-        //             listItems[i].style.color = 'blue';
-        //             continue;
-        //         }
-        //         if (i % 2 !== 0) {
-        //             listItems[i].style.color = 'grey';
-        //         }
-        //     }
-        //
-        //
-        //     //    add event listener to button 4
-        //
-        //     var buttonFour = document.addEventListener("click",chan) {
-        //     });
-        // }
-        //
-        var button1 = document.getElementById('change-header-btn');
-        button1.addEventListener("click", function (e) {
-            var mainHeader =document.getElementById('main-header') ;
+        var button1=document.getElementsByClassName('btn1')[0]
+        button1.addEventListener('click' ,function (){
             mainHeader.innerHTML=("JavaScript is Cool");
-        });
+        })
+        //    add event listener to button 2
+
+        var button2=document.getElementsByClassName('btn2')[0]
+        button2.addEventListener('click' ,function (){
+            subHeader.style.color='blue';
+        })
+        //    add event listener to button 3
+
+        var button3=document.getElementsByClassName('btn3')[0]
+        button3.addEventListener('click' ,function (){
+            for(var i=0;i<listItems.length;i++){
+                if(listItems[i].getAttribute('data-dbid')==='1'){
+                    listItems[i].style.color='blue';
+                    continue;
+                }
+                if(i%2!==0){
+                    listItems[i].style.color='grey';
+                }
+            }
+        })
+        //    add event listener to button 4
+        var button4=document.getElementsByClassName('btn4')[0]
+        button4.addEventListener('click' ,function (){
+            subParagraphs[0].innerText="Mission Accomplished";
+
+        })
     }());
 
 
