@@ -3,21 +3,32 @@
 <head>
     <title>Konami Code</title>
 </head>
+<style>
+    .gif{
+        visibility: hidden;
+    }
+</style>
 <body>
     <h1>Konami Code</h1>
+
+    <div class=tenor-gif-embed" data-postid="7991222" data-share-method="host" data-width="100%"
+         data-aspect-ratio="1.3681318681318682">
+        <a href="https://tenor.com/view/secret-the-boss-baby-the-boss-baby-movie-gif-7991222">It's A Secret
+        GIF</a>
+        <a href="https://tenor.com/search/secret-gifs"></a>
+    </div>
     <script src="js/jquery-2.2.4.js"></script>
-    <img src="i"
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
     <script>
-    "use strict";
 $(document).ready(function () {
-   var konami=[38,38,40,40,37,39,37,39]
-    $(document).on('keydown', function (e) {
-        if(e.keyCode===38){
+    "use strict";
+    var konami=[38,40,38,40,37,39,37,39,66,65,13]
+    $(document).on('keyup', function (e) {
+        if(e.keyCode==konami){
         $('body').css('backgroundColor','red')
             alert('You have added 30 lives!');
-
         }
-        <div class="tenor-gif-embed" data-postid="7991222" data-share-method="host" data-width="100%" data-aspect-ratio="1.3681318681318682"><a href="https://tenor.com/view/secret-the-boss-baby-the-boss-baby-movie-gif-7991222">It's A Secret GIF</a> from <a href="https://tenor.com/search/secret-gifs">Secret GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
     });
 });
 </script>
