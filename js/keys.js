@@ -3,3 +3,4 @@ const OPEN_WEATHER_APPID ="0169d7b27cce2d3d9871f1f0e867ab43";
 
 const newKey="b1f091412e1d832778c926e93b2a0488"
 
+const gitToken='03e0f1ac2301d1ade4b019e86fdf85abbd3bb55c'
