@@ -18,8 +18,7 @@
 <nav class="navbar navbar-light bg-light">
     <form class="form-inline">
 
-        <label for="searchBox"> Place</label> <input class="form-control mr-sm-2" type="text" placeholder="Search"
-                                                     aria-label="Search" id="searchBox" name="searchBox">
+
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find</button>
     </form>
 </nav>
@@ -29,6 +28,7 @@
 
 <!--jQuery,popper,bootstrap-->
 <script src="./js/keys.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -38,6 +38,14 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<link
+        rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+        type="text/css"/>
+
+
+
 
 <script>
 
@@ -47,11 +55,11 @@
         var j;
         var markerArr = [-98.568736, 29.524087];
 
-        function getWeather() {
+        function getWeather(longitude ,latitude) {
             $.get('https://api.openweathermap.org/data/2.5/onecall', {
                 appid: newKey,
-                lat: markerArr[1],
-                lon: markerArr[0],
+                lon: longitude,
+                lat: latitude,
                 exclude: 'minutely hourly',
                 units: 'imperial'
             }).done(function (data) {
@@ -121,7 +129,7 @@
             var location = newMarker.getLngLat()
             markerArr[0] = (location.lng);
             markerArr[1] = (location.lat);
-            getWeather();
+            getWeather(markerArr[0],markerArr[1]);
         }
 
 $('#searchBox').keyup(function (){
@@ -129,6 +137,18 @@ $('#searchBox').keyup(function (){
 
 })
 
+
+        let geocoderSearch= new MapboxGeocoder({accessToken:mapboxgl.accessToken,
+                                                marker:false,
+                                                mapboxgl:mapboxgl    })
+        map.addControl(geocoderSearch)
+
+        geocoderSearch.on('result',function (result){
+            console.log(result);
+            newMarker.setLngLat([result.result.center[0],result.result.center[1]])
+            .addTo(map);
+            getWeather(result.result.center[0],result.result.center[1])
+        })
     });
 
 
@@ -136,4 +156,3 @@ $('#searchBox').keyup(function (){
 </body>
 </html>
 
-<
