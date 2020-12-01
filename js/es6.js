@@ -30,9 +30,9 @@ const users = [
 ];
 
 // TODO: fill in your name and email and add some programming languages you know
-let lang=` I have knowledge of ${users[4].languages[1]} and ${users[4].languages[2]} 
-and ${users[4].languages[2]} `
 // to the languages array
+let lang=` I, Jaya have knowledge of ${users[4].languages[1]} and ${users[4].languages[2]} 
+and ${users[4].languages[2]} `
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
 // var name = 'your_name_here';
@@ -44,7 +44,7 @@ const name='Crow'
 const email='crowsfly@gmail.com'
 const languages=['javascript','html','css']
 
-// name='saiBaba'==> error as we cannot reasssign const
+// name='saiBaba'==> error as we cannot reassign const
 
 // TODO: rewrite the object literal using object property shorthand
 // users.push({
@@ -60,8 +60,8 @@ const user={
 // var emails = [];
 // var names = [];
 
-let emails=[];
-let name=[];
+// let emails=[];
+// let name=[];
 
 // TODO: rewrite the following using arrow functions
 users.forEach(function(user) {
@@ -77,7 +77,7 @@ users.forEach(function(user) {
 
 
 // TODO: replace `var` with `let` in the following declaration
-var developers = [];
+let developers = [];
 users.forEach(function(user) {
   // TODO: rewrite the code below to use object destructuring assignment
   //       note that you can also use destructuring assignment in the function
@@ -91,12 +91,12 @@ users.forEach(function(user) {
 });
 
 // TODO: Use `let` for the following variable
-var list = '<ul>';
+let list = '<ul>';
 
 // TODO: rewrite the following loop to use a for..of loop
 developers.forEach(function (developer) {
 
   // TODO: rewrite the assignment below to use template strings
-  list += '<li>' + developer + '</li>';
+  list += `<li>developer</li>`;
 });
 list += '</ul>';
